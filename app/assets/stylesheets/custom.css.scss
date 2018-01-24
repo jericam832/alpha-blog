@@ -2,8 +2,19 @@ $navbar-default-bg: #414345;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-weight: 400;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #eaeaea;
+    font-weight: 400;
+}
+body {
+    font-family: 'Arimo', sans-serif;
+}
 #logo {
+    font-family: 'Arimo', sans-serif;
     color: #fff;
     float: left;
     font-size: 1.7em;
@@ -45,12 +56,23 @@ $navbar-default-bg: #414345;
     margin-top: 20px;
     border-top: 1px solid #eaeaea;
     padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
 }
-.article-title {
-    font-weight: bold;
-    font-size: 1.5em;
+.panel-title {
+    font-weight: 500;
+    font-size: 1.7em;
+    
 }
-.article-body {
+.panel-title a{
+    color: black;
+} 
+small {
+    font-size: 12px;
+}
+
+.panel-body {
+    font-size: 14px;
     border-top: 1px solid #eaeaea;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -85,4 +107,20 @@ footer ul li {
     float: left;
     margin-left: 15px;
     color: #222;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span, 
+.pagination > .active > span:hover, 
+.pagination > .active > span:focus ,{
+    z-index: 3;
+    color: #fff;
+    background-color: #414345;
+    border-color: #414345;
+    cursor: default;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #414345;
 }
