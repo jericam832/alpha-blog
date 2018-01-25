@@ -1,10 +1,13 @@
-$navbar-default-bg: #414345;
+$navbar-default-bg: #2d3436;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome.css";
+
 .navbar-default .navbar-nav > li > a {
     color: #fff;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 16px;
 }
 .navbar-default .navbar-nav > li > a:hover {
     color: #eaeaea;
@@ -26,26 +29,40 @@ body {
     color: #eaeaea;
     text-decoration: none;
 }
-
-.jumbotron {
-    margin-top: 20px;
-    background-image: asset-url('items.jpg');
-    background-size: cover;
-    height: 650px;
-}
-
-.jumbotron h1{
-  text-align: center;
-  margin-bottom: 30px;
+header h1{
+  color: #fff;
+  margin-top: 200px;
+  margin-left: 80px;
+//   margin-bottom: 30px;
   letter-spacing: -1px;
+  font-size: 4.5em;
   font-weight: 500;
+  font-style: italic;
 }
-
+#home-header{
+    background-image: asset-url('items.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 720px;
+}
+#home-text{
+    margin-left: 80px;
+    color: #fff;
+    font-size: 2.0em;
+}
 .btn-xlarge {
     margin-top: 40px;
     font-size: 1.7em;
-    background-color: #e52d27;
-    border-color: #e52d27;
+    background-color: #0984e3;
+    border-color: #0984e3;
+    margin-left: 80px;
+    padding: 20px;
+    border-radius: 1px;
+}
+.btn-lg {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 1px;
 }
 .article-meta-details {
     border-top: 1px solid #eaeaea;
@@ -59,6 +76,9 @@ body {
     padding-bottom: 5px;
     padding-right: 5px;
 }
+.panel-heading {
+    padding: 5px 15px 10px 15px;
+}
 .panel-title {
     font-weight: 500;
     font-size: 1.7em;
@@ -71,6 +91,11 @@ small {
     font-size: 12px;
 }
 
+.panel-default {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+                0 4px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 1px;
+}
 .panel-body {
     font-size: 14px;
     border-top: 1px solid #eaeaea;
@@ -80,9 +105,7 @@ small {
 .listing {
     list-style: none;
     padding-left: 0;
-
 }
-
 #flash_success {
     text-align: center;
 }
@@ -123,4 +146,35 @@ footer ul li {
 }
 .pagination > li > a, .pagination > li > span {
     color: #414345;
+}
+
+label {
+    float: left;
+    font-size: 16px;
+}
+
+#session_email,
+#session_password,
+#user_username,
+#user_email,
+#user_password {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    line-height: 1.428571429;
+}
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#user-grid {
+    margin-top: 30px;
+}
+.thumbnail {
+    border-radius: 1px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+                0 4px 20px 0 rgba(0,0,0,0.19);
+}
+#user-link a {
+    color: black;
 }

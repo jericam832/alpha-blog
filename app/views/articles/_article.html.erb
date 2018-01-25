@@ -6,7 +6,8 @@
             <div class="panel-heading">
                 <div class="panel-title" align="center">
                    <h2>"<%= link_to article.title, article_path(article) %>"</h2>
-                    <small>Created By: <%= article.user.username if article.user %> 
+                   <hr>
+                    <small>Created By: <strong><%= article.user.username if article.user %></strong> 
                             <%= time_ago_in_words(article.created_at) %> ago,
                             Last Updated:  <%= time_ago_in_words(article.updated_at) %>
                     </small>
@@ -14,9 +15,8 @@
             </div>
             <div class="panel-body">
                 <%= truncate(article.description, length: 200) %>
-                <!--<div class="article-meta-details">-->
-                   
-                <!--</div>-->
+                 </br>
+                 <%= link_to "Read More", article_path(article), class: "btn btn-lg btn-default" %>
             </div>
             <% if logged_in? && (current_user == article.user || current_user.admin?) %>
                 <div class="article-actions" align="right">
