@@ -1,68 +1,119 @@
-$navbar-default-bg: #2d3436;
+$navbar-default-bg: #0984e3;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome.css";
-
+// @import "font-awesome.css";
+.navbar-default {
+    border-radius: 0;
+    height: 75px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+    // box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+    //         0 4px 20px 0 rgba(0,0,0,0.19);
+}
 .navbar-default .navbar-nav > li > a {
     color: #fff;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
+    margin-top: 10px;
+    
 }
 .navbar-default .navbar-nav > li > a:hover {
     color: #eaeaea;
-    font-weight: 400;
+    font-weight: 700;
 }
+#bs-example-navbar-collapse-1 > ul {
+    margin-right: 150px;
+}
+
 body {
     font-family: 'Arimo', sans-serif;
+    background-color: #edf3f3;
 }
 #logo {
+    margin-top: 10px;
+    margin-left: 150px;
     font-family: 'Arimo', sans-serif;
     color: #fff;
     float: left;
-    font-size: 1.7em;
-    text-transform: uppercase;
+    font-size: 2.2em;
+    // text-transform: uppercase;
     letter-spacing: -1px;
-    font-weight: 600;
+    font-weight: 500;
 }
 #logo:hover {
     color: #eaeaea;
     text-decoration: none;
 }
-header h1{
-  color: #fff;
+// .page-title {
+//     font-size: 42px;
+    
+// }
+
+body > div:nth-child(3) > div.jumbotron > div > h1, 
+body > div:nth-child(3) > div.jumbotron > div > p {
+    color: #fff;
+    text-shadow: #777 1px 0 10px;
+    font-weight: 500;
+    
+
+}
+// #users-head > div {
+//   background: #636e72;
+  
+// }
+
+
+
+header h1 {
+  color: #000;
   margin-top: 200px;
-  margin-left: 80px;
+  margin-left: 50px;
 //   margin-bottom: 30px;
-  letter-spacing: -1px;
-  font-size: 4.5em;
-  font-weight: 500;
+  letter-spacing: -2px;
+  font-size: 4.75em;
+  font-weight: 600;
   font-style: italic;
+  text-shadow: #fff 1px 0 10px;
+  
 }
 #home-header{
-    background-image: asset-url('items.jpg');
+    background-image: asset-url('tech.jpg');
     background-position: center;
     background-size: cover;
-    min-height: 720px;
+    min-height: 550px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+    // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+    //             0 4px 18px 0 rgba(0,0,0,0.19);
 }
 #home-text{
-    margin-left: 80px;
-    color: #fff;
-    font-size: 2.0em;
+    margin-left: 50px;
+    color: #000;
+    font-size: 1.25em;
+    text-shadow: #fff 1px 0 10px;
 }
 .btn-xlarge {
     margin-top: 40px;
     font-size: 1.7em;
     background-color: #0984e3;
     border-color: #0984e3;
-    margin-left: 80px;
+    margin-left: 50px;
     padding: 20px;
     border-radius: 1px;
+    // box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+    //             0 4px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
 }
 .btn-lg {
+    color: #fff;
     margin-top: 30px;
     padding: 10px;
     border-radius: 1px;
+    background-color: #0984e3;
+    border-color: #0984e3;
+}
+.btn-xs {
+    border-radius: 1px;
+    font-weight: 500;
 }
 .article-meta-details {
     border-top: 1px solid #eaeaea;
@@ -76,24 +127,71 @@ header h1{
     padding-bottom: 5px;
     padding-right: 5px;
 }
+p {
+   font-size: 1.0em; 
+}
+.title > h2 {
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.jumbotron {
+    // border-radius: 1px;
+    background-image: asset-url('items.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    min-height: 360px;
+    background-color: #fff;
+    // box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+    //             0 4px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+                
+            
+}
+#users-head {
+    background-image: asset-url('tech.jpg');
+    background-position: center center;
+    background-size: cover;
+    min-height: 360px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+    
+}
+
+body > div:nth-child(3) > div.jumbotron {
+    border-radius: 1px;
+}
+
+#categories > div {
+    box-shadow: none;
+    border-radius: 0;
+}
+
 .panel-heading {
     padding: 5px 15px 10px 15px;
+   
+}
+.panel-default > .panel-heading {
+    color: #000;
+    background-color: #fff;
+    // background-color: #0984e3;
 }
 .panel-title {
     font-weight: 500;
-    font-size: 1.7em;
+    font-size: 1.0em;
     
 }
 .panel-title a{
-    color: black;
+    color: #000;
 } 
 small {
     font-size: 12px;
 }
 
 .panel-default {
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
-                0 4px 20px 0 rgba(0,0,0,0.19);
+    // box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+    //             0 4px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
     border-radius: 1px;
 }
 .panel-body {
@@ -102,6 +200,27 @@ small {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.sidebar-title1 {
+    color: #fff;
+    
+    font-style: italic;
+    background-color: #0984e3;
+    padding: 8px;
+    margin-top: 0;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+}
+.sidebar-title2 {
+    color: #fff;
+    font-style: italic;
+    background-color: #2d3436;
+    padding: 8px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+}
+
+#cat-list {
+    font-size: 16px;
+}
+
 .listing {
     list-style: none;
     padding-left: 0;
@@ -130,6 +249,7 @@ footer ul li {
     float: left;
     margin-left: 15px;
     color: #222;
+    
 }
 
 .pagination > .active > a,
@@ -140,12 +260,12 @@ footer ul li {
 .pagination > .active > span:focus ,{
     z-index: 3;
     color: #fff;
-    background-color: #414345;
-    border-color: #414345;
+    background-color: #0984e3;
+    border-color: #0984e3;
     cursor: default;
 }
 .pagination > li > a, .pagination > li > span {
-    color: #414345;
+    color: #0984e3;
 }
 
 label {
@@ -165,16 +285,42 @@ label {
 }
 hr {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 #user-grid {
     margin-top: 30px;
 }
 .thumbnail {
+    background-color: #fff;
     border-radius: 1px;
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
-                0 4px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+}
+.img-thumbnail {
+    margin-top: 5px;
+}
+#user-grid > p {
+    font-size: 16px;
 }
 #user-link a {
-    color: black;
+    color: #000;
+}
+// #user-grid > div > div > div {
+//     margin-bottom: 5px;
+// }
+.list-group {
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+}
+.list-group-item {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    
+}
+#article-count {
+    color: #000;
+    font-size: 16px;
+}
+
+body > div:nth-child(3) > div.jumbotron > div > h1 > i {
+    color: #fff;
 }

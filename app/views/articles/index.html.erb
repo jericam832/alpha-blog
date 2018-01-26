@@ -1,9 +1,15 @@
-<h1 align="center">List of All Articles</h1>
-<p class="text-center">This is some dummy text for the index articles template.</p>
-<hr>
-<div align="center">
-    <%= will_paginate %>
+<div class="jumbotron" id="articles-head">
+    <div class="container">
+        <h1 class="page-title"> <i class="fa fa-edit"></i>  All Articles</h1>
+        <p>This is some dummy text for the index articles template.</p>
+      
+    </div>
 </div>
+
+
+<!--<div align="center">-->
+<!--    < will_paginate %>-->
+<!--</div>-->
 <%= render 'article', obj: @articles %>
 
 <div align="center">

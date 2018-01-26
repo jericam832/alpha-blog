@@ -1,37 +1,76 @@
-<% obj.each do |article| %>
-
 <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title" align="center">
-                   <h2>"<%= link_to article.title, article_path(article) %>"</h2>
-                   <hr>
-                    <small>Created By: <strong><%= article.user.username if article.user %></strong> 
-                            <%= time_ago_in_words(article.created_at) %> ago,
-                            Last Updated:  <%= time_ago_in_words(article.updated_at) %>
-                    </small>
+    <div class="col-xs-12 col-md-8">
+  
+        <% obj.each do |article| %>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                           <h2>"<%= link_to article.title, article_path(article) %>"</h2>
+                           <!--<hr>-->
+                           
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                         <small>Created By: <strong><%= article.user.username if article.user %></strong> 
+                                    <%= time_ago_in_words(article.created_at) %> ago,
+                                    Last Updated:  <%= time_ago_in_words(article.updated_at) %>
+                            </small>
+                            </br>
+                            <hr>
+                        <%= truncate(article.description, length: 250) %>
+                         </br>
+                         <%= link_to "Read More", article_path(article), class: "btn btn-lg btn-default" %>
+                    </div>
+                    <% if logged_in? && (current_user == article.user || current_user.admin?) %>
+                        <div class="article-actions" align="right">
+                            <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-success" %>
+                            <%= link_to "Delete", article_path(article), method: :delete,
+                                            data: { confirm: "Are you sure you want to delete this article?"},
+                                            class: "btn btn-xs btn-danger" %>
+                                            
+                        </div>
+                    <% end %>
+                
                 </div>
+            
             </div>
-            <div class="panel-body">
-                <%= truncate(article.description, length: 200) %>
-                 </br>
-                 <%= link_to "Read More", article_path(article), class: "btn btn-lg btn-default" %>
-            </div>
-            <% if logged_in? && (current_user == article.user || current_user.admin?) %>
-                <div class="article-actions" align="right">
-                    <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-info" %>
-                    <%= link_to "Delete", article_path(article), method: :delete,
-                                    data: { confirm: "Are you sure you want to delete this article?"},
-                                    class: "btn btn-xs btn-danger" %>
-                                    
-                </div>
-            <% end %>
         
         </div>
-    
+        
+        <% end %>
+    </div>    
+    <div class="col-sm-6 col-md-4">
+        <h2 class="sidebar-title1">Spotlight</h2>
+        <div class="list-group">
+            <button type="button" id="cat-list" class="list-group-item">Cras justo odio</button>
+            <button type="button" id="cat-list" class="list-group-item">Dapibus ac facilisis in</button>
+            <button type="button" id="cat-list" class="list-group-item">Morbi leo risus</button>
+            <button type="button" id="cat-list" class="list-group-item">Porta ac consectetur ac</button>
+            <button type="button" id="cat-list" class="list-group-item">Vestibulum at eros</button>
+        </div>
+        
+           <h2 class="sidebar-title2">Categories</h2>
+        <div class="list-group">
+            <button type="button" id="cat-list" class="list-group-item">Cras justo odio</button>
+            <button type="button" id="cat-list" class="list-group-item">Dapibus ac facilisis in</button>
+            <button type="button" id="cat-list" class="list-group-item">Morbi leo risus</button>
+            <button type="button" id="cat-list" class="list-group-item">Porta ac consectetur ac</button>
+            <button type="button" id="cat-list" class="list-group-item">Vestibulum at eros</button>
+        </div>
+        
+        <!--   <h2 class="sidebar-title">Categories</h2>-->
+        <!--<div class="list-group">-->
+        <!--    <button type="button" id="cat-list" class="list-group-item">Cras justo odio</button>-->
+        <!--    <button type="button" id="cat-list" class="list-group-item">Dapibus ac facilisis in</button>-->
+        <!--    <button type="button" id="cat-list" class="list-group-item">Morbi leo risus</button>-->
+        <!--    <button type="button" id="cat-list" class="list-group-item">Porta ac consectetur ac</button>-->
+        <!--    <button type="button" id="cat-list" class="list-group-item">Vestibulum at eros</button>-->
+        <!--</div>-->
+        
     </div>
-
-</div>
-
-<% end %>
+        
+        
+    
+</div>     

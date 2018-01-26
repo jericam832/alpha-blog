@@ -1,4 +1,4 @@
-<h1 align="center">Blogger Login</h1>
+<h1 align="center">Blogger Login <i class="fa fa-user-circle" aria-hidden="true"></i></h1>
 <hr>
 </br>
 <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
@@ -27,5 +27,5 @@
         
         <% end %>
         <div class="text-center">
-            [ <%= link_to "Go Back", articles_path %> ]
+            [ <%= link_to "Go Back", articles_path %> | New User? <%= link_to "Sign-up", signup_path %>  ]  
         </div>

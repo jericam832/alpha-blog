@@ -11,7 +11,10 @@
     <hr>
     <%= will_paginate @user_articles %>
 </div>
+
+<!-- Render a different page for user profile -->
+
 <%=render 'articles/article', obj: @user_articles %>
-<div align="center">
+<div>
     <%= will_paginate @user_articles %>
 </div>
