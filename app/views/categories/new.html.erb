@@ -1,4 +1,4 @@
-<h1>Create New Category</h1>
+<h1 align="center">Create New Category</h1>
 
 <%= render 'shared/errors', obj: @category %>
 
@@ -6,7 +6,6 @@
         
     <div class="form-group">
         <div class="col-md-6 col-md-offset-3">
-            <%= f.label :name, "Category:" %> 
             <%= f.text_field :name, class: "form-control", placeholder: "Category Name", autofocus: true %>
         </div>
     </div>
