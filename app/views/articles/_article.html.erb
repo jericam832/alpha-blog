@@ -42,33 +42,14 @@
         <% end %>
     </div>    
     <div class="col-sm-6 col-md-4">
-        <h2 class="sidebar-title1">Spotlight</h2>
+        <h2 class="sidebar-title2">Categories</h2>
         <div class="list-group">
-            <button type="button" id="cat-list" class="list-group-item">Cras justo odio</button>
-            <button type="button" id="cat-list" class="list-group-item">Dapibus ac facilisis in</button>
-            <button type="button" id="cat-list" class="list-group-item">Morbi leo risus</button>
-            <button type="button" id="cat-list" class="list-group-item">Porta ac consectetur ac</button>
-            <button type="button" id="cat-list" class="list-group-item">Vestibulum at eros</button>
+            <% Category.all.each do |category |%>
+                <button type="button" id="cat-list" class="list-group-item">
+                    <%= link_to "#{category.name}", category_path(category) %>
+                </button>
+            <% end %>
         </div>
-        
-           <h2 class="sidebar-title2">Categories</h2>
-        <div class="list-group">
-            <button type="button" id="cat-list" class="list-group-item">Cras justo odio</button>
-            <button type="button" id="cat-list" class="list-group-item">Dapibus ac facilisis in</button>
-            <button type="button" id="cat-list" class="list-group-item">Morbi leo risus</button>
-            <button type="button" id="cat-list" class="list-group-item">Porta ac consectetur ac</button>
-            <button type="button" id="cat-list" class="list-group-item">Vestibulum at eros</button>
-        </div>
-        
-        <!--   <h2 class="sidebar-title">Categories</h2>-->
-        <!--<div class="list-group">-->
-        <!--    <button type="button" id="cat-list" class="list-group-item">Cras justo odio</button>-->
-        <!--    <button type="button" id="cat-list" class="list-group-item">Dapibus ac facilisis in</button>-->
-        <!--    <button type="button" id="cat-list" class="list-group-item">Morbi leo risus</button>-->
-        <!--    <button type="button" id="cat-list" class="list-group-item">Porta ac consectetur ac</button>-->
-        <!--    <button type="button" id="cat-list" class="list-group-item">Vestibulum at eros</button>-->
-        <!--</div>-->
-        
     </div>
         
         
