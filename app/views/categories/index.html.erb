@@ -12,7 +12,10 @@
             <p>Here is the list of Alpha Blog topics...</p>
               <ul class="list-group">
                 <% @categories.each do |category| %>
-                  <%= link_to "#{category.name}", category_path(category), :class => "list-group-item", :method => :get %>
+                 <li id="cat-list" class="list-group-item">
+                    <%= link_to "#{category.name}", category_path(category) %>
+                  <span class="badge"><%= (category.articles.count) %></span>
+                  </li>
               <% end %>
             </ul>
           </div>

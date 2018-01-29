@@ -26,6 +26,9 @@
                 <h4 class="description"><strong>Description:</strong></h4>
                 <hr>
                 <%= simple_format(@article.description) %>
+                <% if @article.categories.any? %>
+                    <p>Tags: <%= render @article.categories %></p>
+                <% end %>
             </div>
                 <div class="article-actions" align="right">
                 <% if logged_in? &&  (current_user == @article.user || current_user.admin?) %>

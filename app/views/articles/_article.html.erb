@@ -20,9 +20,15 @@
                             </br>
                             <hr>
                         <%= truncate(article.description, length: 250) %>
+                        </br>
+                        <%= link_to "Read More", article_path(article), class: "btn btn-lg btn-default" %>
                          </br>
-                         <%= link_to "Read More", article_path(article), class: "btn btn-lg btn-default" %>
+                          </br>
+                        <% if article.categories.any? %>
+                            <p>Tags: <%= render article.categories %></p>
+                        <% end %>
                     </div>
+                    
                     <% if logged_in? && (current_user == article.user || current_user.admin?) %>
                         <div class="article-actions" align="right">
                             <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-success" %>
@@ -45,9 +51,9 @@
         <h2 class="sidebar-title2">Categories</h2>
         <div class="list-group">
             <% Category.all.each do |category |%>
-                <button type="button" id="cat-list" class="list-group-item">
-                    <%= link_to "#{category.name}", category_path(category) %>
-                </button>
+                <!--<button type="button" id="cat-list" class="list-group-item">-->
+                    <%= link_to "#{category.name}", category_path(category) , class: "badge" %>
+                <!--</button>-->
             <% end %>
         </div>
     </div>

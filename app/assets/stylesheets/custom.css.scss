@@ -62,8 +62,6 @@ body > div:nth-child(3) > div.jumbotron > div > p {
   
 // }
 
-
-
 header h1 {
   color: #000;
   margin-top: 200px;
@@ -128,7 +126,7 @@ header h1 {
     padding-right: 5px;
 }
 p {
-   font-size: 1.0em; 
+   font-size: 1.25em; 
 }
 .title > h2 {
     font-size: 1.7em;
@@ -195,7 +193,7 @@ small {
     border-radius: 1px;
 }
 .panel-body {
-    font-size: 14px;
+    font-size: 16px;
     border-top: 1px solid #eaeaea;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -208,9 +206,19 @@ small {
     padding: 8px;
     box-shadow: 0px 0px 5px rgba(0,0,0,.1);
 }
-
+.badge {
+    background-color: #0984e3;
+   
+    
+}
+.list-group-item > .badge {
+    float: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
 #cat-list {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .listing {
@@ -315,4 +323,8 @@ hr {
 
 body > div:nth-child(3) > div.jumbotron > div > h1 > i {
     color: #fff;
+}
+
+.input_checkbox input {
+    width: auto !important;
 }
