@@ -2,10 +2,10 @@
     <div class="col-xs-12 col-md-8">
         <!-- render a button when user has no articles -->
         <div align="center">
-            <% if (current_user == @user) and (@user.articles.count == 0 ) %>
-            <p class="profile-text" align="center">We can see that you have not posted an article, yet.</p>
-            <%= link_to "Write Your First Article", new_article_path, class: "btn btn-lg btn-default" %>
-        <% end %> 
+            <% if (current_user == @user) and (@user_articles.count == 0 ) %>
+                <p class="profile-text" align="center">We can see that you have not posted an article, yet.</p>
+                <%= link_to "Write Your First Article", new_article_path, class: "btn btn-lg btn-default" %>
+            <% end %> 
         </div>
                 
         <% obj.each do |article| %>
