@@ -46,21 +46,9 @@ body {
 #users-head > div {
     margin-top: 40px;
 }
-body > div:nth-child(3) > div.jumbotron > div > h1, 
-body > div:nth-child(3) > div.jumbotron > div > p {
-    color: black;
-    text-shadow: #fff 1px 0 10px;
-    font-weight: 600;
-    font-style: italic;
-    
-
-}
-// #users-head > div {
-//   background: #636e72;
-  
-// }
 
 header h1 {
+    font-family: 'Arima Madurai', cursive;
   color: #000;
   margin-top: 200px;
   margin-left: 50px;
@@ -69,7 +57,7 @@ header h1 {
   font-size: 4.75em;
   font-weight: 600;
   font-style: italic;
-  text-shadow: #fff 1px 0 10px;
+  text-shadow: #fff 1px 0 5px;
   
 }
 #home-header{
@@ -135,8 +123,8 @@ p {
 }
 
 #articles-head {
-    background-image: asset-url('items.jpg');
-    background-position: center bottom;
+    background-image: asset-url('write.jpeg');
+    background-position: center center;
     background-size: cover;
     min-height: 360px;
     background-color: #fff;
@@ -166,8 +154,9 @@ body > div:nth-child(3) > div.jumbotron {
    
 }
 .panel-default > .panel-heading {
-    color: #000;
+    color: #fff;
     background-color: #0984e3;
+    font-family: 'Arima Madurai', cursive;
 }
 .panel-title {
     font-weight: 500;
@@ -176,7 +165,7 @@ body > div:nth-child(3) > div.jumbotron {
     
 }
 .panel-title a{
-    color: #000;
+    color: #fff;
     
 } 
 small {
@@ -194,12 +183,14 @@ small {
     padding-bottom: 15px;
 }
 .sidebar-title2 {
+    font-family: 'Arima Madurai', cursive;
     margin-top: 0;
     color: #fff;
     font-style: italic;
     background-color: #0984e3;
     padding: 8px;
     box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+    text-align: center;
 }
 .badge {
     background-color: #2d3436;
@@ -271,6 +262,7 @@ label {
     font-size: 16px;
 }
 #category_name,
+#article_title,
 #session_email,
 #session_password,
 #user_username,
@@ -281,6 +273,13 @@ label {
     font-size: 20px;
     line-height: 1.428571429;
 }
+#article_description {
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.428571429;
+}
+
+
 hr {
     margin-top: 0;
     margin-bottom: 5px;
@@ -313,18 +312,38 @@ hr {
     font-weight: 600;
     text-align: center;
     
+    
 }
 #article-count {
     color: #000;
     font-size: 16px;
 }
+body > div:nth-child(3) > div.jumbotron > div > h1 {
+    font-family: 'Arima Madurai', cursive;
+    color: white;
+    text-shadow: #000 1px 0 7px;
+    font-weight: 600;
+    font-style: italic;
+    
+
+}
+body > div:nth-child(3) > div.jumbotron > div > p {
+    font-family: 'Arimo', sans-serif;
+    color: white;
+    text-shadow: #000 1px 0 7px;
+    font-weight: 600;
+    font-style: italic;
+}
 
 body > div:nth-child(3) > div.jumbotron > div > h1 > i {
-    color: black;
+    color: #fff;
 }
 
 .input_checkbox input {
     width: auto !important;
+}
+#tags {
+    font-size: 14px;
 }
 
 #tags > span > a {
@@ -345,17 +364,19 @@ body > div:nth-child(3) > div.jumbotron > div > h1 > i {
     margin-top: 40px;
 }
 #cat-head > div > h1,
-#cat-head > div > p,
+#cat-head > div > p
 {
     color: white;
-    text-shadow: none;
+    text-shadow: #000 1px 0 5px;
     font-weight: 600;
     
 }
-
+#cat-head > div > p{
+    font-family: 'Arimo', sans-serif;
+}
 #cat-head > div > h1 > i {
     color: white;
-    text-shadow: none;
+    text-shadow: #000 1px 0 5px;
     font-weight: 400;
 }
 #cat-head {
@@ -387,4 +408,12 @@ body > div:nth-child(3) > div.jumbotron > div > h1 > i {
 #new-button{ 
     margin-top: 0;
     
+}
+label {
+    font-family: 'Arima Madurai', cursive;
+    font-size: 18px;
+}
+
+#page-title {
+    font-family: 'Arima Madurai', cursive;
 }
