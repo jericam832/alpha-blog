@@ -1,6 +1,13 @@
 <div class="row">
     <div class="col-xs-12 col-md-8">
-  
+        <!-- render a button when user has no articles -->
+        <div align="center">
+            <% if (current_user == @user) and (@user.articles.count == 0 ) %>
+            <p class="profile-text" align="center">We can see that you have not posted an article, yet.</p>
+            <%= link_to "Write Your First Article", new_article_path, class: "btn btn-lg btn-default" %>
+        <% end %> 
+        </div>
+                
         <% obj.each do |article| %>
         <div class="row">
             <div class="col-md-12">
@@ -8,8 +15,6 @@
                     <div class="panel-heading">
                         <div class="panel-title">
                            <h2>"<%= link_to article.title, article_path(article) %>"</h2>
-                           <!--<hr>-->
-                           
                         </div>
                     </div>
                     <div class="panel-body">
@@ -25,7 +30,7 @@
                          </br>
                           </br>
                         <% if article.categories.any? %>
-                            <p>Tags: <%= render article.categories %></p>
+                            <p id="tags">Tags: <%= render article.categories %></p>
                         <% end %>
                     </div>
                     

@@ -1,15 +1,26 @@
 <!-- row of photos related to categories -->
-<h1 class="page-title" align="center">All Categories <i class="fa fa-list-alt"></i></h1>
 
+<div class="jumbotron" id="cat-head">
+  <div class="container">
+    <h1 class="page-title"><i class="fa fa-list-alt"></i> All Categories </h1>
+      <% if logged_in? and current_user.admin? %>
+            <div class="row">
+                <span class="badge"><%= link_to "Add New Category", new_category_path %></span>   
+            </div>
+        <% end %>
+        <p>This is some dummy text for the index category template.</p>
+    
+    
+  </div>
+</div>
 
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3" id="categories">
         <div class="panel panel-default">
           <div class="panel-heading">
-              <h3>Categories </h3>
              </div>
           <div class="panel-body">
-            <p>Here is the list of Alpha Blog topics...</p>
+            
               <ul class="list-group">
                 <% @categories.each do |category| %>
                  <li id="cat-list" class="list-group-item">
@@ -20,8 +31,9 @@
             </ul>
           </div>
         </div>
+         <div align="center"> <%= will_paginate %></div>
     </div>
 </div>
-    <%= will_paginate %>
+   
 
     

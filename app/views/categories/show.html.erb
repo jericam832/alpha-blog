@@ -1,6 +1,12 @@
 <div class="jumbotron" id="cat-head">
     <div class="container">
         <h1 class="page-title"><%= "Category: " + @category.name %> </h1>
+        
+        <% if logged_in? and current_user.admin? %>
+            <div class="row">
+                <span class="badge"><%= link_to "Edit Category Name", edit_category_path(@category) %></span>   
+            </div>
+        <% end %>
         <p>This is some dummy text for the index articles template.</p>
       
     </div>
